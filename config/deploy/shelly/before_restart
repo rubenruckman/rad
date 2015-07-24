@@ -1,0 +1,4 @@
+set -e
+
+mkdir -p disk/spree
+ln -s ../disk/spree public/spree
