@@ -1,0 +1,2 @@
+<!-- insert_bottom 'body' -->
+<erb loud>render partial: 'spree/shared/footer'</erb>

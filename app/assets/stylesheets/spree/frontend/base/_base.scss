@@ -1,0 +1,40 @@
+/*
+* RAD Colors
+*/
+$black: #000;
+$white: #FFF;
+$gray: #585c65;
+$darkgray: #404040;
+$mediumgray: #9b9b9b;
+$lightgray: #EFEFF0;
+$blue: #13155C;
+$orange: #D33927;
+
+/*
+* RAD Fonts
+*/
+@font-face {
+  font-family: 'GT-Pressura-Bold';
+  src:  font-url('GT-Pressura-Bold.woff') format('woff'),
+  font-url('GT-Pressura-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'GT-Pressura-Regular';
+  src:  font-url('GT-Pressura-Regular.woff') format('woff'),
+  font-url('GT-Pressura-Regular.ttf') format('truetype');
+}
+
+$border-radius-base:        0px;
+$border-radius-large:       0px;
+$border-radius-small:       0px;
+
+$main-font: 'GT-Pressura-Regular', sans-serif;
+$sub-font: 'GT-Pressura-Bold', sans-serif;
+$fancy-font: 'Kaushan Script', cursive;
+$font-size: 16px;
+$font-family-sans-serif: $main-font;
+
+$padding: 10px;
+$margin: 10px;
+

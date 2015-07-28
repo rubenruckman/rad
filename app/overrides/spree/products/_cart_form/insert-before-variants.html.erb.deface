@@ -1,0 +1,2 @@
+<!-- replace "div#product-variants"-->
+<erb loud>render partial: 'spree/products/variant_options'</erb>

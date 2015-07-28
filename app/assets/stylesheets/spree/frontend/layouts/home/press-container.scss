@@ -1,0 +1,21 @@
+.press, .downloads {
+  color: $white;
+  padding: 20px 8%;
+	p{
+	padding:10px 0px;
+	}
+  }
+
+.downloads {
+  background-color: $blue; 
+   .btn-rad {
+    background-color: $blue;
+	}
+}
+
+.press{
+  background-color: $orange;
+	.btn-rad{
+	  background-color: $orange;
+	}
+}

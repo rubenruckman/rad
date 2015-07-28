@@ -1,0 +1,60 @@
+/*
+ * Navigation
+ */
+
+.nav-rad {
+  font-size:1em;
+  text-transform:uppercase;
+  font-family:$sub-font;
+  background-color: inherit;
+  border-color: $white;
+  color: $mediumgray; 
+  text-transform: uppercase;
+  margin-top:20px;
+  margin-bottom:0px;
+  }
+
+ @media (min-width: 768px) {
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top; }
+
+  .navbar .navbar-collapse {
+    text-align: center; } 
+	}
+	  
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+  color: $orange;
+  background-color: $white;
+}
+
+.navbar-toggle{
+	float:left;
+	margin-left:15px;
+}
+
+#top-nav-bar{
+float:right;
+font-size:1em;
+	color:$mediumgray;
+font-family:$sub-font;
+}
+
+#top-nav-bar li{
+	text-align: center;
+	text-transform: uppercase;
+	margin-top:0px;
+	padding:0px;
+}
+
+#top-nav-bar li a{
+	color:$mediumgray;
+	padding:2em 1.2em 2em 1.2em;
+	background-color: $white;
+}
+
+#top-nav-bar .nav > li > a:hover, .navbar-login .nav > li > a:focus {
+  background-color: $orange;
+  color: $white;
+}

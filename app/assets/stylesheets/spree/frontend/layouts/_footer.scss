@@ -1,0 +1,33 @@
+/*
+* Footer
+*/
+
+.footer {
+  width: 100%;
+  clear: both;
+  /* to clear it */
+  background-color: $lightgray;
+	img{
+		padding-top:20px;}
+	h3{
+		font-family:$sub-font;
+		font-size:$font-size;}
+	a{
+		color:$blue;}
+	ul
+	{
+		list-style-type: none;
+		margin:0;
+		padding:0;}
+  }
+
+.footer-container {
+	padding: 0 8%;}
+  
+.copyright{
+	padding-top: 40px;
+	padding-bottom: 20px;
+	text-transformation:uppercase;
+	color:$mediumgray;
+	
+}

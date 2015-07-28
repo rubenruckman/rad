@@ -1,0 +1,35 @@
+header {
+  overflow: hidden;
+  background-color: $blue;
+  padding-bottom: 0;
+  vertical-align: bottom; 
+ }
+
+.header-home {
+  height: 258px;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  background-color: $mediumgray; 
+  background-image:asset-url('store/gabe.jpg');
+ }
+
+ 
+ .header-home img {
+    position: absolute;
+    left: 20px;
+    top: 113px; }
+
+ 
+ .header-rad {
+  height: 152px;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  background-color: $blue; 
+ }
+.header-rad img {
+    position: absolute;
+    left: 48px;
+    top: -40px; }
+
+	
+	

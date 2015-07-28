@@ -1,0 +1,62 @@
+/*
+ * Product Description
+ */
+.product-container {
+line-height:1.6em;
+margin-bottom: 4em;
+}
+
+ .product-container h1{
+font-family: $sub-font;
+color: $darkgray;
+margin-top: 0px;
+}
+.product-container h3{
+ color: black;
+ font-size:1em;
+ font-weight:bold;
+ margin-bottom: 0.6em;
+ margin-top: 1.8em;
+ }
+.product-container ul{
+margin:0px;
+padding:0px;
+}
+.product-container li{
+list-style:none;
+}
+
+.list-sizes li, .list-colors li {
+display:inline;
+}
+
+ #product-price{
+ font-family: $main-font;
+ color:$mediumgray;
+ font-size:1.2em;
+margin-top:1.8em;
+margin-bottom:1.8em;
+}
+
+ #Add-to-Cart{
+margin-top:3em;
+margin-bottom:3em; 
+}
+
+/*
+ * Product Images
+ */
+ .list-inline > li{
+ padding:0px;
+ }
+ .rad-thumbs ul{
+ font-size:0;
+ }
+  .rad-thumbs ul li{
+ display: inline;
+ }
+ img.thumbnail{
+  padding: 0px;
+  border: 0px;
+ }
+ 

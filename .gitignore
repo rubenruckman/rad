@@ -15,3 +15,5 @@
 /log/*
 !/log/.keep
 /tmp
+/spree_radstyle
+/spree-rad-master-NOT USED

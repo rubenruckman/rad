@@ -1,0 +1,29 @@
+.custom-container {
+  padding:40px 20% 40px 20%;
+  h1, h2, h3 {
+ font-family:$sub-font;
+ color:$gray;
+ }
+}
+
+.press-container, .download-container {
+  color: $white;
+  padding: 20px 8%;
+	p{
+	padding:10px 0px;
+	}
+  }
+
+.download-container {
+  background-color: $blue; 
+   .btn-rad {
+    background-color: $blue;
+	}
+}
+
+.press-container{
+  background-color: $orange;
+	.btn-rad{
+	  background-color: $orange;
+	}
+}

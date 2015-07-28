@@ -1,0 +1,41 @@
+.prod-container {
+  background-color: $blue;
+  color: $white;
+	margin:0px;
+  h1{
+	padding:20px 0 30px 20px;
+	margin:0px;
+	background: $blue asset-url('store/RAD_Mark_ProductBanner.svg') no-repeat right top;
+    background-position   : 120% -220px;
+    background-size       : 500px;
+
+  }
+}
+
+.prod-imgs {
+  padding-left: 0;
+  padding-right: 0;
+  margin-right: 0;
+  margin-left: 0; }
+
+  
+  .prod-text {
+  margin: 0;
+  padding: 10px; 
+  a{
+  color:$mediumgray;
+  font-weight:normal;
+  }
+  a:hover, a:focus{
+  color:white;
+  text-decoration:none;
+    }
+  }
+
+
+.prod-title a, .prod-title a:hover, .prod-title a:focus{
+  color:$orange;
+  font-weight: bold;
+  text-decoration:none;
+}
+

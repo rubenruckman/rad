@@ -1,0 +1,13 @@
+<% if spree_current_user %>
+  <li class="hidden-xs">
+    <%= link_to Spree.t(:logout), spree_logout_path, :method => :delete %>
+  </li>
+<% else %>
+  <li class="hidden-xs">
+    <%= link_to Spree.t(:login), spree_login_path %>
+  </li>
+  <li class="hidden-xs">
+    <%= link_to Spree.t(:signup), spree_signup_path %>
+  </li>
+<% end %>
+<li class="hidden-xs"><%= link_to_cart %></li>

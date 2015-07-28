@@ -1,0 +1,2 @@
+<!-- replace_contents 'li#search-bar' -->
+<li class="hidden-xs"><erb loud> link_to_cart </erb></li>

@@ -1,0 +1,26 @@
+.prodindex-container {
+padding:2em 10% 4em 10%;
+line-height:3em;
+}
+.prodindex-container h1, h2{
+	margin-left:-15px;
+	color:$blue;
+  }
+.prodindex-container h1{
+  font-family:$main-font;
+  font-size: 4em;
+  margin-top:0;
+}
+.prodindex-container h2{
+  margin-top:2em;
+  margin-bottom:0.6em;
+  font-family:$sub-font;
+  }
+  
+.prodindex-container a{
+color:$mediumgray;
+}
+.prodindex-container a:hover, .prodindex-container a:focus{
+text-decoration:none;
+color:$mediumgray;
+}

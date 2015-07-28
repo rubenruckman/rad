@@ -1,0 +1,18 @@
+<!-- replace_contents '#main-nav-bar' -->
+   <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#rad-navbar-collapse">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+      </button>
+   </div>
+   <div class="collapse navbar-collapse" id="rad-navbar-collapse">
+     <ul class="nav navbar-nav">
+     <li class="hidden-lg hidden-md hidden-sm"><erb loud>  link_to_cart </erb></li>
+     <li role="separator" class="divider hidden-lg hidden-md hidden-sm"></li>
+     <erb loud>render partial: 'spree/shared/nav_login_bar'</erb>
+     <li role="separator" class="divider hidden-lg hidden-md hidden-sm"></li>
+     <erb loud>render partial: 'spree/static_content/static_content_header'</erb>
+    </ul>
+    </div>

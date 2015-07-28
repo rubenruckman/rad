@@ -1,0 +1,2 @@
+set_attributes 'div.container'
+attributes :class => 'container-fluid'
