@@ -2,6 +2,10 @@ admin pwd?
 ruben@radfurniture.com
 a1bumsu6
 
+github
+rubenruckman@gmail.com
+pwd normal gp
+
 Is it necessary to do something with these commands for ShellyCloud? will find out...
 
 For Spree Static content, need to run some migrations:
@@ -29,6 +33,7 @@ For development server:
 rails s -p $PORT -b $IP -e development
 
 Commit to git:
+git add 
 git commit -m "msg: UI improvements"
 
 Upload to github:
@@ -37,3 +42,5 @@ git push
 To start ShellyCloud
 git push shelly master
 shelly start --cloud rad
+
+to stop ShellyCloud
