@@ -1,9 +1,21 @@
 .custom-container {
   padding:40px 20% 40px 20%;
-  h1, h2, h3 {
- font-family:$sub-font;
- color:$gray;
- }
+}
+
+.instagram-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+	p{
+	padding:40px 0px;
+	}
+}
+
+
+.custom-container, .instagram-container {
+    h1, h2, h3 {
+     font-family: $sub-font;
+     color: $gray;
+    }
 }
 
 .press-container, .download-container {
