@@ -1,0 +1,30 @@
+<!-- replace 'div#products' -->
+<div id="products" class="container" data-hook>
+<erb silent> max_level = Spree::Config[:max_level_in_taxons_menu] || 1 </erb>
+<div class="row">
+<h1>Products</h1>
+  <erb silent> @taxonomies.each do |taxonomy| </erb>
+    <erb silent> cache [I18n.locale, taxonomy, max_level, @taxon] do </erb>
+      <h4 class='taxonomy-root'><erb loud> taxonomy.name </erb></h4>
+      <div id="products" class="row" data-hook>
+      <erb silent> Spree::Product.in_taxons(taxonomy.id).each do |product| </erb>
+        <erb silent> url = spree.product_url(product, taxon_id: @taxon.try(:id)) </erb>
+          <div id="product_<erb loud> product.id </erb>" class="col-md-3 col-sm-6 product-list-item" data-hook="products_list_item" itemscope itemtype="https://schema.org/Product">
+            <div class="">
+              <erb silent> cache(@taxon.present? ? [I18n.locale, current_currency, @taxon, product] : [I18n.locale, current_currency, product]) do </erb>
+                <div class="">
+                  <erb loud> link_to small_image(product, itemprop: "image"), url, itemprop: 'url' </erb><br/>
+                  <erb loud> link_to truncate(product.name, length: 50), url, class: 'info', itemprop: "name", title: product.name </erb>
+                </div>
+              <erb silent> end </erb>
+            </div>
+          </div>
+        <erb silent> end </erb>
+        <erb silent> reset_cycle("classes") </erb>
+      </div>
+      
+      
+    <erb silent> end </erb>
+  <erb silent> end </erb>
+  </div>
+</div>

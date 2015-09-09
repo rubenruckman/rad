@@ -55,3 +55,4 @@ gem 'spree_editor', github: 'spree-contrib/spree_editor', branch: '3-0-stable'
 gem 'dotenv-rails'
 gem 'shelly-dependencies'
 # gem 'spree_radstyle', :path => './spree_radstyle'
+

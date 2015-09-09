@@ -29,8 +29,11 @@ bundle && bundle exec rails g spree_static_content:install
 vetted cmds for development and git push shelly master
 -------------------------------------------------------------------
 
-For development server:
+For C9 development server:
+--------------------------
+sudo service postgresql start
 rails s -p $PORT -b $IP -e development
+URL: https://rad-shelly-rubenruckman.c9.io/
 
 Commit to git:
 git add 
