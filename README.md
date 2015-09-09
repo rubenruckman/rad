@@ -42,8 +42,10 @@ git commit -m "msg: UI improvements"
 Upload to github:
 git push
 
-To start ShellyCloud
+Push to Shellycloud - this deploys as well.
 git push shelly master
-shelly start --cloud rad
 
+
+Starting and Stopping ShellyCloud
+shelly start --cloud rad
 to stop ShellyCloud

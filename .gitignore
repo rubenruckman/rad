@@ -18,6 +18,7 @@
 /spree_radstyle
 /spree-rad-master-NOT USED
 public/spree/*
+
 # Spree ignore files 
 \#*
 **/*.db
