@@ -17,7 +17,7 @@
 /tmp
 /spree_radstyle
 /spree-rad-master-NOT USED
-
+public/spree/products
 # Spree ignore files 
 \#*
 **/*.db
