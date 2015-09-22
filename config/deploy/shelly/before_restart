@@ -2,3 +2,6 @@ set -e
 
 mkdir -p disk/spree
 ln -s ../disk/spree public/spree
+
+mkdir -p disk/ckeditor_assets
+ln -s ../disk/ckeditor_assets public/ckeditor_assets
