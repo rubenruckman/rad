@@ -1,4 +1,6 @@
 # config/deploy/shelly/before_restart
+# Edit this hook through the Shellycloud interface using the following cmd: 
+# shelly config edit config/deploy/shelly/before_restart
 
 # Show errors for ShellyCloud
 set -e
