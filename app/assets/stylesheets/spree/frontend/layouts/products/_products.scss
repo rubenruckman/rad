@@ -46,7 +46,9 @@ margin-bottom:3em;
 /*
  * Product Images
  */
- .list-inline > li{
+ .list-inline > li:not(:first-child,:last-child){
+  padding-right: 3.5px;
+  padding-left: 3.5px;
  }
  .rad-thumbs ul{
  font-size:0;
@@ -63,6 +65,4 @@ margin-bottom:3em;
 }
 
 .col:not(:first-child,:last-child) {
-  padding-right:7px;
-  padding-left:7px;
 }
