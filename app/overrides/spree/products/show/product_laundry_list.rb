@@ -34,7 +34,7 @@ Deface::Override.new(:virtual_path => 'spree/products/show',
 Deface::Override.new(:virtual_path => 'spree/products/show',
                      :name => 'add_container_attributes',
                      :set_attributes => "[data-hook='product_show']",
-                     :attributes => {:class => 'container product-container'})
+                     :attributes => {:class => 'product-container'})
 
 Deface::Override.new(:virtual_path => 'spree/products/show',
                      :name => 'remove_panel_body',
@@ -44,4 +44,4 @@ Deface::Override.new(:virtual_path => 'spree/products/show',
 Deface::Override.new(:virtual_path => 'spree/products/show',
                      :name => 'hide_sm_md_thumbnails',
                      :set_attributes => "#thumbnails",
-                     :attributes => {:class => 'hidden-sm'})
+                     :attributes => {:class => 'hidden-xs'})

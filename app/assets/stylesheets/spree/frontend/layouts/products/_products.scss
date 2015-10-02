@@ -4,9 +4,10 @@
 .product-container {
 line-height:1.6em;
 margin-bottom: 4em;
+padding-left:4%;
+padding-right:4%;
 }
-
- .product-container h1{
+.product-container h1{
 font-family: $sub-font;
 color: $darkgray;
 margin-top: 0px;
@@ -18,51 +19,53 @@ margin-top: 0px;
  margin-bottom: 0.6em;
  margin-top: 1.8em;
  }
-.product-container ul{
-margin:0px;
-padding:0px;
-}
-.product-container li{
-list-style:none;
-}
 
 .list-sizes li, .list-colors li {
 display:inline;
 }
 
- #product-price{
+#product-price{
  font-family: $main-font;
  color:$mediumgray;
  font-size:1.2em;
-margin-top:1.8em;
-margin-bottom:1.8em;
+ margin-top:1.8em;
+ margin-bottom:1.8em;
 }
 
- #Add-to-Cart{
+#Add-to-Cart{
 margin-top:3em;
 margin-bottom:3em; 
 }
 
 /*
  * Product Images
- */
- .list-inline > li:not(:first-child,:last-child){
+ *
+ .list-inline li{
   padding-right: 3.5px;
   padding-left: 3.5px;
  }
- .rad-thumbs ul{
+.rad-thumbs > li:first-child{
+  padding-left: 15px;
+ }
+.rad-thumbs > li:last-child{
+  padding-right: 15px;
+ }
+*/
+.rad-thumbs li{
  font-size:0;
- }
-  .rad-thumbs ul li{
  display: inline;
- }
- img.thumbnail{
+ padding-right: 3.5px;
+ padding-left: 3.5px;
+}
+
+img.thumbnail{
   border: 0px;
- }
+}
  
 #main-image{
  margin-bottom:7px;
 }
-
-.col:not(:first-child,:last-child) {
+#product-thumbnails{
+  padding-left: 12.5px;
+  padding-right: 12.5px;
 }

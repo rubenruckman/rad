@@ -1,13 +1,13 @@
  /* from http://www.cheesetoast.co.uk/add-grayscale-images-hover-css-black-white/ */ 
 .grayscale{ 
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);  /* For Webkit browsers */
+    filter: grayscale(100%) opacity(50%);
+    -webkit-filter: grayscale(100%) opacity(50%);  /* For Webkit browsers */
     filter: gray;  /* For IE 6 - 9 */
     -webkit-transition: all .6s ease;  /* Transition for Webkit browsers */
 }
 
 .grayscale:hover { 
-    filter: grayscale(0%);
-    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%) opacity(100%);
+    -webkit-filter: grayscale(0%) opacity(100%);
     filter: none;
 }

@@ -9,8 +9,6 @@ header {
   height: 258px;
   padding-bottom: 0%;
   margin-bottom: 0%;
-  background-color: $mediumgray; 
-  background-image:asset-url('store/gabe.jpg');
  }
 
  
@@ -26,6 +24,7 @@ header {
   margin-bottom: 0%;
   background-color: $blue; 
  }
+ 
 .header-rad img {
     position: absolute;
     left: 48px;
