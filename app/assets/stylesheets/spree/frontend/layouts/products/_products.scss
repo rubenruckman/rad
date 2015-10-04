@@ -9,13 +9,19 @@ padding-right:4%;
 }
 .product-container h1{
 font-family: $sub-font;
-color: $darkgray;
+color: $red;
 margin-top: 0px;
 }
+
+.product-container h1 span, h3{
+display:block;
+color: $darkgray;
+font-size: .5em;
+}
+
 .product-container h3{
- color: black;
- font-size:1em;
- font-weight:bold;
+ font-size: 1.2em;
+ font-family: $sub-font;
  margin-bottom: 0.6em;
  margin-top: 1.8em;
  }

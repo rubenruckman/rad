@@ -45,3 +45,12 @@ Deface::Override.new(:virtual_path => 'spree/products/show',
                      :name => 'hide_sm_md_thumbnails',
                      :set_attributes => "#thumbnails",
                      :attributes => {:class => 'hidden-xs'})
+
+Deface::Override.new(:virtual_path => 'spree/products/show',
+                     :name => 'replace_product_name',
+                     :replace_contents => "h1.product-title",
+                     :text => "<%  if @product.property('firstline').present? %>
+                        <span><%= @product.property('firstline') %></span><%= @product.property('secondline') %>
+                      <% else %>
+                        <%= @product.name %>
+                      <% end %>")

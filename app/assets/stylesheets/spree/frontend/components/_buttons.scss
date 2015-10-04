@@ -54,6 +54,10 @@ min-width:3em;
 min-height:3em;
 
 }
+.list-inline > li {
+    padding-left: 1.5px;
+    padding-right: 1.51px;
+}
 
 .btn-prod-color{
     color: transparent; 
@@ -104,4 +108,5 @@ border-color: $prod-green;
 
 .btn-prod-color:hover, .btn-prod-color:focus{
 border-color:$mediumgray;
+color:transparent;
 }
