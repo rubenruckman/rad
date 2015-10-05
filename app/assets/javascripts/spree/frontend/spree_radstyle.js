@@ -178,7 +178,6 @@ function VariantOptions(params) {
 
   function toggle() {
     if (variant) {
-      alert("inhere");
       $('#variant_id, form[data-form-type="variant"] input[name$="[variant_id]"]').val(variant.id);
       $('#product-price .price').removeClass('unselected').text(variant.price);
       if (variant.count > 0 || allow_backorders)
