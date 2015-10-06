@@ -2,7 +2,7 @@
 /*
 * Buttons
 */
-.btn{
+.btn {
     text-transform: uppercase;
 }
 
@@ -68,43 +68,29 @@ background-color: $lightgray;
 border-color: $lightgray;
 }
 
-$prod-gray: #6f807a;
-$prod-white: #fcfdff;
-$prod-blue: #1953fd;
-$prod-black: #000000;
-$prod-white: #fcfdff;
-$prod-yellow: #fffb3a;
-$prod-green:#00df02;
-$prod-red: #fa1d2c;
+$prod-lightgrey: #CCCECF;
+$prod-smoke: #593A1C;
+$prod-matteblack: #231F20;
+$prod-lightblue: #45AAE0;
+$prod-denim: #3654A4;
+$prod-yellow: #FFE600;
+$prod-white: #FFF;
 
-.btn-prod-gray{
-background-color: $prod-gray;
-border-color: $prod-gray;
+@mixin prod-button($color) {
+    background-color: $color;
+    border-color: $color;
+    width: 40px;
+    height: 40px;
 }
-.btn-prod-white{
-background-color: $prod-white;
-border-color: $prod-white;
-}
-.btn-prod-blue{
-background-color: $prod-blue;
-border-color: $prod-blue;
-}
-.btn-prod-red{
-background-color: $prod-red;
-border-color: $prod-red;
-}
-.btn-prod-black{
-background-color: $prod-black;
-border-color: $prod-black;
-}
-.btn-prod-yellow{
-background-color: $prod-yellow;
-border-color: $prod-yellow;
-}
-.btn-prod-green{
-background-color: $prod-green;
-border-color: $prod-green;
-}
+
+.btn-prod-lightgrey { @include prod-button($prod-lightgrey); }
+.btn-prod-smoke     { @include prod-button($prod-smoke); }
+.btn-prod-matteblack{ @include prod-button($prod-matteblack); }
+.btn-prod-lightblue { @include prod-button($prod-lightblue); }
+.btn-prod-denim     { @include prod-button($prod-denim); }
+.btn-prod-yellow    { @include prod-button($prod-yellow); }
+.btn-prod-white     { @include prod-button($prod-white); }
+
 
 .btn-prod-color:hover, .btn-prod-color:focus{
 border-color:$mediumgray;

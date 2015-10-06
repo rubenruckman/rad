@@ -1,12 +1,5 @@
-admin pwd?
-ruben@radfurniture.com
-a1bumsu6
-
-github
-rubenruckman@gmail.com
-pwd normal gp
-
-Is it necessary to do something with these commands for ShellyCloud? will find out...
+Spree for shellycloud
+-------------------------------------------------------------------
 
 For Spree Static content, need to run some migrations:
 bundle && bundle exec rails g spree_static_content:install
