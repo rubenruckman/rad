@@ -178,7 +178,6 @@ function VariantOptions(params) {
 
   function toggle() {
     if (variant) {
-      alert("toggle:if");
       $('#variant_id, form[data-form-type="variant"] input[name$="[variant_id]"]').val(variant.id);
       $('#product-price .price').removeClass('unselected').text(variant.price);
       if (variant.count > 0 || allow_backorders)
@@ -190,7 +189,6 @@ function VariantOptions(params) {
         // depends on modified version of product.js
       }
     } else {
-      alert("toggle:else");
       $('#variant_id, form[data-form-type="variant"] input[name$="[variant_id]"]').val('');
       $('#cart-form button[type=submit], form[data-form-type="variant"] button[type=submit]').attr('disabled', true).fadeTo(0, 0.5);
       price = $('#product-price .price').addClass('unselected')
