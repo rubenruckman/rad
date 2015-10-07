@@ -13,6 +13,7 @@
      <li role="separator" class="divider hidden-lg hidden-md hidden-sm"></li>
      <erb loud>render partial: 'spree/shared/nav_login_bar'</erb>
      <li role="separator" class="divider hidden-lg hidden-md hidden-sm"></li>
+     <li><a href="/products">Products</a></li>
      <erb loud>render partial: 'spree/static_content/static_content_header'</erb>
     </ul>
     </div>
