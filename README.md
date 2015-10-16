@@ -28,6 +28,17 @@ sudo service postgresql start
 rails s -p $PORT -b $IP -e development
 URL: https://rad-shelly-rubenruckman.c9.io/
 
+
+For restoring backup to c9 development server:
+-------------------------------------------------------------------
+pg_restore --verbose --clean --no-acl --no-owner -h localhost -U rubenr -d spree_rad rad.sql
+
+For downloading images etc from shelly cloud.
+--------------------------------------------------------------------
+shelly file download --cloud rad
+
+
+
 Commit to git:
 git add 
 git commit -m "msg: UI improvements"

@@ -10,6 +10,7 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
+/rad.postgresql
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -17,7 +18,6 @@
 /tmp
 /spree_radstyle
 /spree-rad-master-NOT USED
-public/spree/*
 
 # Spree ignore files 
 \#*
@@ -50,10 +50,8 @@ Gemfile.lock
 lib/products_index_profiler.rb
 log/*.log
 pkg
-public/assets
 public/attachments
 public/blank_iframe.html
-public/ckeditora
 sandbox/*
 spree_dev
 spree_test
