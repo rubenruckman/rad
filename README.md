@@ -33,6 +33,13 @@ For restoring backup to c9 development server:
 -------------------------------------------------------------------
 pg_restore --verbose --clean --no-acl --no-owner -h localhost -U rubenr -d spree_rad rad.sql
 
+
+For Engineyard: Env variable secret_key_base for devise:
+------------------------------------------
+add gem 'envyable'
+add config/env.yml
+ey scp config/env.yml HOST:/data/radfurniture/shared/config/env.yml -e rad_production
+
 For downloading images etc from shelly cloud.
 --------------------------------------------------------------------
 shelly file download --cloud rad
