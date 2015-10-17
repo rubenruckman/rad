@@ -56,3 +56,4 @@ gem 'dotenv-rails'
 gem 'shelly-dependencies'
 # gem 'spree_radstyle', :path => './spree_radstyle'
 # gem engineyard
+gem 'envyable'
