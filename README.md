@@ -40,6 +40,14 @@ add gem 'envyable'
 add config/env.yml
 ey scp config/env.yml HOST:/data/radfurniture/shared/config/env.yml -e rad_production
 
+SSH to database:
+-----------------------------------
+ssh deploy@ec2-52-26-240-237.us-west-2.compute.amazonaws.com
+
+Connect to Postgres DB:
+-------------------------------------------
+psql -Udeploy -d radfurniture -h 127.0.0.1
+
 For downloading images etc from shelly cloud.
 --------------------------------------------------------------------
 shelly file download --cloud rad
