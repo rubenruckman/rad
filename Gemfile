@@ -57,4 +57,4 @@ gem 'spree_editor', github: 'spree-contrib/spree_editor', branch: '3-0-stable'
 # gem 'spree_radstyle', :path => './spree_radstyle'
 # gem engineyard
 gem 'envyable'
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
