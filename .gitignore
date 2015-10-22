@@ -39,6 +39,7 @@ bin/*
 public/dispatch.cgi
 public/dispatch.fcgi
 public/dispatch.rb
+public/assets
 httpd
 pgsql
 config/*-public.asc
