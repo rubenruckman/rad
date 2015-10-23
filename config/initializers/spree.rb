@@ -17,6 +17,27 @@ Spree.config do |config|
   config.admin_interface_logo = 'admin/RAD_Logo_Lockup_White.svg'
 end
 
+# Paperclip::Attachment.default_options.merge!(
+#     YOUR OPTIONS FOR S3 HERE
+# ) 
+
+#paperclip_defaults = {
+#
+#  s3_credentials: {
+#    access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
+#    secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+#    bucket:            ENV['S3_BUCKET_NAME']
+#  },
+#
+#  storage:        :s3,
+#  s3_headers:     { "Cache-Control" => "max-age=31557600" },
+#  s3_protocol:    "https",
+#  bucket:         ENV['S3_BUCKET_NAME'],
+#  url:            ":s3_domain_url",
+#
+#  path: "/:class/:id/:style/:clean_filename"
+#}
+
 attachment_config = {
 
   s3_credentials: {
@@ -46,5 +67,9 @@ attachment_config = {
 attachment_config.each do |key, value|
   Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
 end
+
+#paperclip_defaults.each do |key, value|
+#  Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
+#end
 
 Spree.user_class = "Spree::User"

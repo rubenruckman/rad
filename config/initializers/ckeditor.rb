@@ -31,6 +31,7 @@ config.authorize_with :cancan, Spree::Ability
   # Customize ckeditor assets path
   # By default: nil
   # config.asset_path = "http://www.example.com/assets/ckeditor/"
+  # config.asset_path = ":rails_root/rubentests/ckeditor_assets/pictures/:id/:style_:basename.:extension"
 
   # To reduce the asset precompilation time, you can limit plugins and/or languages to those you need:
   # By default: nil (no limit)
