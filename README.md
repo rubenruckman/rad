@@ -1,4 +1,4 @@
-Spree for shellycloud
+Spree for Engineyard
 -------------------------------------------------------------------
 
 For Spree Static content, need to run some migrations:
@@ -64,3 +64,12 @@ git push
 deploy on engineyard
 ey deploy
 
+Look into:
+---------------------------------------------
+for slideshow:
+
+for paypal express:
+https://github.com/spree-contrib/better_spree_paypal_express
+
+for email templates:
+https://github.com/spree/spree/tree/45cec5215763da26e0089415f4c49afffd683bd9/core/app/views/spree/order_mailer

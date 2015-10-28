@@ -46,12 +46,13 @@ group :development, :test do
 end
 
 
-gem 'spree', '3.0.3'
+gem 'spree', github: 'spree/spree', branch: '3-0-stable'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
 gem 'deface', github: 'spree/deface'
 gem 'spree_static_content', github: 'spree-contrib/spree_static_content', branch: '3-0-stable'
 gem 'spree_editor', github: 'spree-contrib/spree_editor', branch: '3-0-stable'
+gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings', branch: '3-0-stable'
 #gem 'dotenv-rails'
 #gem 'shelly-dependencies'
 # gem 'spree_radstyle', :path => './spree_radstyle'
