@@ -4,11 +4,11 @@
 <h1>Products</h1>
   <% @taxonomies.each do |taxonomy| %>
     <% cache [I18n.locale, taxonomy, max_level, @taxon] do %>
-      <h4 class='taxonomy-root'><%= taxonomy.name %></h4>
+      <h3 class='taxonomy-root'><%= taxonomy.name %></h3>
       <div id="products" class="row" data-hook>
       <% Spree::Product.in_taxons(taxonomy.id).sort_by(&:available_on).each do |product| %>
         <% url = spree.product_url(product, taxon_id: @taxon.try(:id)) %>
-          <div id="product_<%= product.id %>" class="col-xs-12 col-sm-3 prod-imgs" data-hook="products_list_item" itemscope itemtype="https://schema.org/Product">
+          <div id="product_<%= product.id %>" class="col-xs-12 col-sm-3 img-gutter-7-7" data-hook="products_list_item" itemscope itemtype="https://schema.org/Product">
             <div class="">
               <% cache(@taxon.present? ? [I18n.locale, current_currency, @taxon, product] : [I18n.locale, current_currency, product]) do %>
                 <div class="">

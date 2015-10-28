@@ -19,7 +19,7 @@ spree install --auto-accept
 
 bundle && bundle exec rails g spree_static_content:install
 
-vetted cmds for development and git push shelly master
+vetted cmds for development and ey deploy
 -------------------------------------------------------------------
 
 For C9 development server:
@@ -52,19 +52,15 @@ For downloading images etc from shelly cloud.
 --------------------------------------------------------------------
 shelly file download --cloud rad
 
-
-
 Commit to git:
 git add 
 git commit -m "msg: UI improvements"
 
+
 Upload to github:
 git push
 
-Push to Shellycloud - this deploys as well.
-git push shelly master
 
+deploy on engineyard
+ey deploy
 
-Starting and Stopping ShellyCloud
-shelly start --cloud rad
-to stop ShellyCloud
