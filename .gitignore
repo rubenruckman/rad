@@ -6,6 +6,7 @@
 
 # Ignore RMR Junk
 /junk
+Readme-nicholas.rdoc
 
 # Ignore bundler config.
 /.bundle

@@ -63,7 +63,7 @@ min-height:3em;
     color: transparent; 
 }
 
-.btn-prod-size:hover, .btn-prod-size:focus{
+.btn-prod-size:hover, .btn-prod-size:focus,.btn-prod-size.selected{
 background-color: $lightgray; 
 border-color: $lightgray;
 }
@@ -92,7 +92,7 @@ $prod-white: #FFF;
 .btn-prod-white     { @include prod-button($prod-white); }
 
 
-.btn-prod-color:hover, .btn-prod-color:focus{
+.btn-prod-color:hover, .btn-prod-color:focus, .btn-prod-color.selected{
 border-color:$mediumgray;
 color:transparent;
 }

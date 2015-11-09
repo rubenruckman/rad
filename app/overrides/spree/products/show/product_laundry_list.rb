@@ -22,11 +22,6 @@ Deface::Override.new(:virtual_path => 'spree/products/show',
                      :attributes => {:class => ''})
                      
 Deface::Override.new(:virtual_path => 'spree/products/show',
-                     :name => 'remove-description-attributes',
-                     :set_attributes => "[data-hook='description']",
-                     :attributes => {:class => ''})
-
-Deface::Override.new(:virtual_path => 'spree/products/show',
                      :name => 'replace_main_img_formatting',
                      :set_attributes => "#main-image",
                      :attributes => {:class => ''})
@@ -39,7 +34,7 @@ Deface::Override.new(:virtual_path => 'spree/products/show',
 Deface::Override.new(:virtual_path => 'spree/products/show',
                      :name => 'remove_panel_body',
                      :set_attributes => "div.panel-body",
-                     :attributes => {:class => 'text-center'})
+                     :attributes => {:class => 'text-center slider-for'})
 
 Deface::Override.new(:virtual_path => 'spree/products/show',
                      :name => 'hide_sm_md_thumbnails',

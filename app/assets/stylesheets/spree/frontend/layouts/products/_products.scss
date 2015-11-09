@@ -53,28 +53,27 @@ margin-bottom:3em;
   padding-right: 3.5px;
   padding-left: 3.5px;
  }
-.rad-thumbs > li:first-child{
+.rad-thumbs > div:first-child{
   padding-left: 15px;
  }
-.rad-thumbs > li:last-child{
+.rad-thumbs > div:last-child{
   padding-right: 15px;
  }
 */
-.rad-thumbs li{
- font-size:0;
- display: inline;
- padding-right: 3.5px;
- padding-left: 3.5px;
-}
 
-img.thumbnail{
-  border: 0px;
-}
  
 #main-image{
  margin-bottom:7px;
 }
+
 #product-thumbnails{
   padding-left: 12.5px;
   padding-right: 12.5px;
 }
+
+.rad-thumb img{
+ font-size:0;
+ padding-right: 3.5px;
+ padding-left: 3.5px;
+}
+
