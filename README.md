@@ -64,9 +64,16 @@ git push
 deploy on engineyard
 ey deploy
 
+Install ssh key:
+----------------------------------------------
+eval `ssh-agent -s`
+ssh-add ~/.ssh/id_rsa_ey
+p hint: 5-3
+
 Look into:
 ---------------------------------------------
 for slideshow:
+slick.js
 
 for paypal express:
 https://github.com/spree-contrib/better_spree_paypal_express

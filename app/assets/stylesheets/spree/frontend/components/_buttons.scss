@@ -89,10 +89,11 @@ $prod-white: #FFF;
 .btn-prod-lightblue { @include prod-button($prod-lightblue); }
 .btn-prod-denim     { @include prod-button($prod-denim); }
 .btn-prod-yellow    { @include prod-button($prod-yellow); }
-.btn-prod-white     { @include prod-button($prod-white); }
+.btn-prod-white     { @include prod-button($prod-white); border: 2px solid $lightgray;}
 
 
 .btn-prod-color:hover, .btn-prod-color:focus, .btn-prod-color.selected{
 border-color:$mediumgray;
+border-width: 0.4em;
 color:transparent;
 }

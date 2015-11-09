@@ -49,19 +49,24 @@ function VariantOptions(params) {
   function init() {
 
     divs = $('#product-variants .variant-options');
-    disable(divs.find('a.option-value').addClass('locked')); //tried commenting out RMR
-    
+    //removed - we don't want to disable the original "selected" variant options. Instead, let's find what the 
+    // original option is! update, enable (parent.find('a.option-value');, toggle, advance, find variant, toggle.
+    // This may only work when there are two variant options.  One (or 3) variants may kill this hack.
+    //disable(divs.find('a.option-value').addClass('locked'));
     update();
     enable(parent.find('a.option-value'));
     toggle();
-    $('.clear-option a.clear-button').hide().click(handle_clear);
-    if (default_instock) {
+        advance();
+        if (find_variant()) {
+          toggle();
+        }
+        //removed - we don't want to mess with clear options
+//    $('.clear-option a.clear-button').hide().click(handle_clear);
+   if (default_instock) {
       divs.each(function(){
         $(this).find("ul.variant-option-values li a.in-stock:first").click();
       });
     }
-
-
   }
 
   function get_index(parent) {
@@ -208,8 +213,9 @@ function VariantOptions(params) {
     enable(buttons.removeClass('selected'));
     toggle();
     parent.nextAll().each(function(index, element) {
+// THIS is the line to focus on.  We want to disable if it's the same option, don't go to other variants.
       disable($(element).find('a.option-value').show().removeClass('in-stock out-of-stock').addClass('locked').unbind('click'));
-      $(element).find('a.clear-button').hide();
+//      $(element).find('a.clear-button').hide();
     });
     //show_all_variant_images();
   }
@@ -229,7 +235,9 @@ function VariantOptions(params) {
     if (!parent.has(a).length) {
       clear(divs.index(a.parents('.variant-options:first')));
     }
+
     disable(buttons);
+    
     var a = enable(a.addClass('selected'));
     parent.find('a.clear-button').css('display', 'block');
     advance();
