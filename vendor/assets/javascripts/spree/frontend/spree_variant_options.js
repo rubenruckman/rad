@@ -50,23 +50,24 @@ function VariantOptions(params) {
 
     divs = $('#product-variants .variant-options');
     //removed - we don't want to disable the original "selected" variant options. Instead, let's find what the 
-    // original option is! update, enable (parent.find('a.option-value');, toggle, advance, find variant, toggle.
-    // This may only work when there are two variant options.  One (or 3) variants may kill this hack.
+    // original option is! update, enable (parent.find('a.option-value'), advance to Opt 2
+    // Note: This may only work when there are two variant options.  One (or 3) variants may kill this hack.
     //disable(divs.find('a.option-value').addClass('locked'));
+
+    // added, copied from handle_click
     update();
     enable(parent.find('a.option-value'));
-    toggle();
-        advance();
-        if (find_variant()) {
-          toggle();
-        }
-        //removed - we don't want to mess with clear options
+
+    // Advance will call handle_click and discover the selected items.
+    advance();
+    
+    // RMR- REMOVING ALL clear buttons
 //    $('.clear-option a.clear-button').hide().click(handle_clear);
-   if (default_instock) {
-      divs.each(function(){
-        $(this).find("ul.variant-option-values li a.in-stock:first").click();
-      });
-    }
+//   if (default_instock) {
+//      divs.each(function(){
+//        $(this).find("ul.variant-option-values li a.in-stock:first").click();
+//      });
+//    }
   }
 
   function get_index(parent) {
@@ -77,7 +78,8 @@ function VariantOptions(params) {
     index = isNaN(i) ? index : i;
     parent = $(divs.get(index));
     buttons = parent.find('a.option-value');
-    parent.find('a.clear-button').hide();
+    // REMOVING ALL clear buttons
+    //parent.find('a.clear-button').hide();
   }
 
   function disable(btns) {
@@ -116,7 +118,8 @@ function VariantOptions(params) {
       variants = get_variant_objects(element.rel);
       keys = $.keys(variants);
       if (keys.length == 0) {
-        disable($(element).addClass('unavailable locked').unbind('click'));
+        // RMR - don't make anything unavailable, just because it isn't in our current option. 
+        //disable($(element).addClass('unavailable locked').unbind('click'));
       } else if (keys.length == 1) {
         _var = variants[keys[0]];
         $(element).addClass((allow_backorders || _var.count) ? selection.length == 1 ? 'in-stock auto-click' : 'in-stock' : 'out-of-stock');
@@ -212,12 +215,14 @@ function VariantOptions(params) {
     update(i);
     enable(buttons.removeClass('selected'));
     toggle();
-    parent.nextAll().each(function(index, element) {
-// THIS is the line to focus on.  We want to disable if it's the same option, don't go to other variants.
-      disable($(element).find('a.option-value').show().removeClass('in-stock out-of-stock').addClass('locked').unbind('click'));
-//      $(element).find('a.clear-button').hide();
-    });
-    //show_all_variant_images();
+
+// RMR Do NOT disable parents, only the Option we are on. Leave other options selected so that we can grab their values!!!
+    //parent.nextAll().each(function(index, element) {
+    //disable($(element).find('a.option-value').show().removeClass('in-stock out-of-stock').addClass('locked').unbind('click'));
+    //Remove reference to clear-button
+    // $(element).find('a.clear-button').hide();
+    //});
+  //show_all_variant_images();
   }
 
 
@@ -239,7 +244,8 @@ function VariantOptions(params) {
     disable(buttons);
     
     var a = enable(a.addClass('selected'));
-    parent.find('a.clear-button').css('display', 'block');
+    // RMR - REMOVING ALL clear buttons
+    // parent.find('a.clear-button').css('display', 'block');
     advance();
     if (find_variant()) {
       toggle();

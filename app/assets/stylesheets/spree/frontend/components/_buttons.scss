@@ -10,12 +10,19 @@ button#add-to-cart-button.btn.btn-success{
     color: $mediumgray;
     background-color: $white; 
     border-color: $mediumgray;
+    border: 1px solid transparent;
+    margin-right: -1px;
 }
 
 button#add-to-cart-button.btn.btn-success:hover, button#add-to-cart-button.btn.btn-success:focus{
     color: $white;
     background-color: $mediumgray; 
     border-color: $mediumgray;
+}
+
+.cart-item-quantity{
+    
+min-width: 80px;
 }
 
 .btn-rad{
