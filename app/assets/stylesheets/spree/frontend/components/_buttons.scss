@@ -20,6 +20,10 @@ button#add-to-cart-button.btn.btn-success:hover, button#add-to-cart-button.btn.b
     border-color: $mediumgray;
 }
 
+ #quantity{
+     width:40px;
+ }
+
 .cart-item-quantity{
     
 min-width: 80px;

@@ -64,7 +64,7 @@ git push
 deploy on engineyard
 ey deploy
 
-Install ssh key:
+Install ssh key - necessary for ey deploy:
 ----------------------------------------------
 eval `ssh-agent -s`
 ssh-add ~/.ssh/id_rsa_ey
