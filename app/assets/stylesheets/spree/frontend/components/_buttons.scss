@@ -21,7 +21,7 @@ button#add-to-cart-button.btn.btn-success:hover, button#add-to-cart-button.btn.b
 }
 
  #quantity{
-     width:40px;
+     min-width:60px;
  }
 
 .cart-item-quantity{
@@ -55,7 +55,7 @@ border-color: $mediumgray;
 }
 
 .btn-prod-color, .btn-prod-size {
-margin:0px;
+margin: 0px 0px 7px 0px;
 padding:.3em;
 background-color: $white; 
 border-color: $white;
