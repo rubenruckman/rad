@@ -5,30 +5,38 @@ header {
   vertical-align: bottom; 
  }
 
-.header-home {
-  height: 258px;
+.header-home, .header-rad {
+  height: 100px;
   padding-bottom: 0%;
   margin-bottom: 0%;
- }
+}
 
- 
- .header-home img {
+#logo img{
     position: absolute;
-    left: 20px;
-    top: 113px; }
+    left: 30px;
+    top: 0px;
+    width:232px;
+}
 
- 
- .header-rad {
-  height: 152px;
-  padding-bottom: 0%;
-  margin-bottom: 0%;
-  background-color: $blue; 
- }
- 
-.header-rad img {
-    position: absolute;
-    left: 48px;
-    top: -40px; }
-
-	
-	
+@media (min-width: $screen-sm-min) {
+    .header-home {
+      height: 258px;
+     }
+    #logo img {
+        left: 20px;
+        top: 113px;
+        width:350px;
+    }
+    .header-rad {
+      height: 152px;
+      padding-bottom: 0%;
+      margin-bottom: 0%;
+      background-color: $blue; 
+     }
+    .header-rad #logo img {
+        width:490px;
+        position: absolute;
+        left: 48px;
+        top: -40px;
+    }
+}

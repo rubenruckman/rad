@@ -44,6 +44,10 @@ SSH to database:
 -----------------------------------
 ssh deploy@ec2-52-26-240-237.us-west-2.compute.amazonaws.com
 
+SSH to app:
+-----------------------------------
+ssh deploy@ec2-54-69-197-201.us-west-2.compute.amazonaws.com
+
 Connect to Postgres DB:
 -------------------------------------------
 psql -Udeploy -d radfurniture -h 127.0.0.1
