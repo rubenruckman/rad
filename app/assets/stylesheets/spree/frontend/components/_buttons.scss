@@ -79,7 +79,7 @@ background-color: $lightgray;
 border-color: $lightgray;
 }
 
-$prod-navyblue: #152b4e;
+$prod-navy: #152b4e;
 $prod-charcoal: #404040;
 $prod-natural:  #fffde1;
 $prod-lightgrey: #CCCECF;
@@ -97,7 +97,7 @@ $prod-white: #FFF;
     height: 40px;
 }
 
-.btn-prod-natural { @include prod-button($prod-navyblue); }
+.btn-prod-navy { @include prod-button($prod-navy); }
 .btn-prod-natural { @include prod-button($prod-natural); }
 .btn-prod-charcoal { @include prod-button($prod-charcoal); }
 .btn-prod-lightgrey { @include prod-button($prod-lightgrey); }
