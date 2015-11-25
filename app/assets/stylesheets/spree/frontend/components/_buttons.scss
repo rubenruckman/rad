@@ -79,11 +79,14 @@ background-color: $lightgray;
 border-color: $lightgray;
 }
 
+$prod-navyblue: #152b4e;
+$prod-charcoal: #404040;
+$prod-natural:  #fffde1;
 $prod-lightgrey: #CCCECF;
 $prod-smoke: #593A1C;
 $prod-matteblack: #231F20;
 $prod-lightblue: #45AAE0;
-$prod-denim: #3654A4;
+$prod-denim: #133181;
 $prod-yellow: #FFE600;
 $prod-white: #FFF;
 
@@ -94,6 +97,9 @@ $prod-white: #FFF;
     height: 40px;
 }
 
+.btn-prod-natural { @include prod-button($prod-navyblue); }
+.btn-prod-natural { @include prod-button($prod-natural); }
+.btn-prod-charcoal { @include prod-button($prod-charcoal); }
 .btn-prod-lightgrey { @include prod-button($prod-lightgrey); }
 .btn-prod-smoke     { @include prod-button($prod-smoke); }
 .btn-prod-matteblack{ @include prod-button($prod-matteblack); }
