@@ -15,6 +15,7 @@ Spree.config do |config|
   config.track_inventory_levels = false
   config.logo = 'store/RAD_Logo_Lockup_White.svg'
   config.admin_interface_logo = 'admin/RAD_Logo_Lockup_White.svg'
+   config.products_per_page = 100
 end
 
 # Paperclip::Attachment.default_options.merge!(
