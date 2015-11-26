@@ -17,7 +17,12 @@ Rails.application.routes.draw do
   # get 'products/:id' => 'catalog#view'
 # get 'apparel' => 'spree/products#apparel'
 # get 'rad-metal-lab' => 'spree/products/rad-metal-lab'
- 
+
+# redirect to radfurniture.com (remove www)
+# constraints subdomain: 'www' do
+#  get ':any', to: redirect(subdomain: nil, path: '/%{any}'), any: /.*/
+#end
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
