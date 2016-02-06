@@ -89,12 +89,26 @@ $prod-lightblue: #45AAE0;
 $prod-denim: #133181;
 $prod-yellow: #FFE600;
 $prod-white: #FFF;
+$prod-pink: 'store/swatch-pink.jpg';
+$prod-chrome: 'store/swatch-chrome.jpg';
+$prod-copper: 'store/swatch-copper.jpg';
+$prod-galvanized: 'store/swatch-galvanized.jpg';
+$prod-gold: 'store/swatch-gold.jpg';
 
 @mixin prod-button($color) {
     background-color: $color;
     border-color: $color;
     width: 40px;
     height: 40px;
+}
+
+@mixin prod-img-button($img) {
+    background: asset-url($img) no-repeat right top;
+    background-position   : -.4em -.4em;
+    background-size       : 45px;
+    width: 40px;
+    height: 40px;
+    border-color:transparent;
 }
 
 .btn-prod-navy { @include prod-button($prod-navy); }
@@ -107,7 +121,11 @@ $prod-white: #FFF;
 .btn-prod-denim     { @include prod-button($prod-denim); }
 .btn-prod-yellow    { @include prod-button($prod-yellow); }
 .btn-prod-white     { @include prod-button($prod-white); border: 2px solid $lightgray;}
-
+.btn-prod-copper    { @include prod-img-button($prod-copper); }
+.btn-prod-chrome    { @include prod-img-button($prod-chrome); }
+.btn-prod-gold    { @include prod-img-button($prod-gold); }
+.btn-prod-pink    { @include prod-img-button($prod-pink); }
+.btn-prod-galvanized    {@include prod-img-button($prod-galvanized); }
 
 .btn-prod-color:hover, .btn-prod-color:focus, .btn-prod-color.selected{
 border-color:$mediumgray;
