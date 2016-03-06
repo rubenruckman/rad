@@ -94,6 +94,7 @@ $prod-chrome: 'store/swatch-chrome.jpg';
 $prod-copper: 'store/swatch-copper.jpg';
 $prod-galvanized: 'store/swatch-galvanized.jpg';
 $prod-gold: 'store/swatch-gold.jpg';
+$prod-camo: 'store/swatch-camo.jpg';
 
 @mixin prod-button($color) {
     background-color: $color;
@@ -121,10 +122,12 @@ $prod-gold: 'store/swatch-gold.jpg';
 .btn-prod-denim     { @include prod-button($prod-denim); }
 .btn-prod-yellow    { @include prod-button($prod-yellow); }
 .btn-prod-white     { @include prod-button($prod-white); border: 2px solid $lightgray;}
+
 .btn-prod-copper    { @include prod-img-button($prod-copper); }
 .btn-prod-chrome    { @include prod-img-button($prod-chrome); }
 .btn-prod-gold    { @include prod-img-button($prod-gold); }
 .btn-prod-pink    { @include prod-img-button($prod-pink); }
+.btn-prod-camo    { @include prod-img-button($prod-camo); }
 .btn-prod-galvanized    {@include prod-img-button($prod-galvanized); }
 
 .btn-prod-color:hover, .btn-prod-color:focus, .btn-prod-color.selected{
