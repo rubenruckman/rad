@@ -4,7 +4,7 @@ class Ckeditor::AttachmentFile < Ckeditor::Asset
                     :path => "/ckeditor_assets/attachments/:id/:filename",
                     :storage => :s3,
                     :s3_credentials => "#{Rails.root}/config/env.yml",
-                    :bucket => 'radfurniture-uswest-0001'
+                    :bucket => 'radfurniture-uswest-001'
 
   validates_attachment_size :data, :less_than => 100.megabytes
   validates_attachment_presence :data

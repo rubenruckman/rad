@@ -5,7 +5,7 @@ class Ckeditor::Picture < Ckeditor::Asset
                     :styles => { :content => '800>', :thumb => '118x100#' },
                       :storage => :s3,
                     :s3_credentials => "#{Rails.root}/config/env.yml",
-                    :bucket => "radfurniture-uswest-0001",
+                    :bucket => "radfurniture-uswest-001",
                     :s3_protocol =>    "https"
 
   validates_attachment_presence :data
