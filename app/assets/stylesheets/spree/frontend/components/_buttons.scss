@@ -89,6 +89,8 @@ $prod-lightblue: #45AAE0;
 $prod-denim: #133181;
 $prod-yellow: #FFE600;
 $prod-white: #FFF;
+$prod-deserttan: #CDAF8B;
+$prod-huntergreen: #2F3F1A;
 $prod-pink: 'store/swatch-pink.jpg';
 $prod-chrome: 'store/swatch-chrome.jpg';
 $prod-copper: 'store/swatch-copper.jpg';
@@ -121,6 +123,8 @@ $prod-camo: 'store/swatch-camo.jpg';
 .btn-prod-lightblue { @include prod-button($prod-lightblue); }
 .btn-prod-denim     { @include prod-button($prod-denim); }
 .btn-prod-yellow    { @include prod-button($prod-yellow); }
+.btn-prod-deserttan    { @include prod-button($prod-deserttan); }
+.btn-prod-huntergreen    { @include prod-button($prod-huntergreen); }
 .btn-prod-white     { @include prod-button($prod-white); border: 2px solid $lightgray;}
 
 .btn-prod-copper    { @include prod-img-button($prod-copper); }
