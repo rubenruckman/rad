@@ -7,7 +7,7 @@
       <a name="<%= taxonomy.name %>"></a>
       <h3 class='taxonomy-root'><%= taxonomy.name %></h3>
       <div id="products" class="row" data-hook>
-      <% Spree::Product.in_taxons(taxonomy.id).sort_by(&:available_on).each do |product| %>
+      <% Spree::Product.in_taxons(taxonomy.id).order(:name).each do |product| %>
         <% url = spree.product_url(product, taxon_id: @taxon.try(:id)) %>
           <div id="product_<%= product.id %>" class="col-xs-12 col-sm-3 img-gutter-7-7" data-hook="products_list_item" itemscope itemtype="https://schema.org/Product">
             <div class="">
@@ -26,7 +26,7 @@
         <% end %>
         <% reset_cycle("classes") %>
       </div>
-      
+
       <% end %>
     <% end %>
   <% end %>
