@@ -14,6 +14,10 @@
      <erb loud>render partial: 'spree/shared/nav_login_bar'</erb>
      <li role="separator" class="divider hidden-lg hidden-md hidden-sm"></li>
      <li><a href="/products">Products</a></li>
+     <% Spree::Taxon.roots.order(:position).each do |taxon| %>
+     <li class='mobile-items'><%= link_to(taxon.name, seo_url(taxon)) %></li>
+     <% end %>
+     
      <erb loud>render partial: 'spree/static_content/static_content_header'</erb>
     </ul>
     </div>

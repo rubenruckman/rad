@@ -8,22 +8,28 @@
   font-family:$sub-font;
   background-color: inherit;
   border-color: $white;
-  color: $mediumgray; 
+  color: $mediumgray;
   text-transform: uppercase;
   margin-top:20px;
   margin-bottom:0px;
+
   }
 
- @media (min-width: 768px) {
+@media (min-width: 768px) {
+  .nav-rad {
+    .mobile-items {
+      display: none;
+    }
+  }
   .navbar .navbar-nav {
     display: inline-block;
     float: none;
     vertical-align: top; }
 
   .navbar .navbar-collapse {
-    text-align: center; } 
+    text-align: center; }
 	}
-	  
+
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
   color: $orange;
   background-color: $white;
