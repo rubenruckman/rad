@@ -62,3 +62,4 @@ gem 'aws-sdk', '< 2.0'
 gem 'foreman'
 gem 'puma', '~> 3.6.0'
 gem 'rails_12factor'
+gem 'dotenv-rails', groups: [:development, :test]

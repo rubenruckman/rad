@@ -17,7 +17,8 @@ Spree.config do |config|
   config.admin_interface_logo = 'admin/RAD_Logo_Lockup_White.svg'
    config.products_per_page = 100
 end
-
+Spree::PermittedAttributes.taxon_attributes << :page
+#permitted_taxon_attribute
 # Paperclip::Attachment.default_options.merge!(
 #     YOUR OPTIONS FOR S3 HERE
 # )
@@ -39,35 +40,35 @@ end
 #  path: "/:class/:id/:style/:clean_filename"
 #}
 
-# attachment_config = {
+attachment_config = {
 
-#   s3_credentials: {
-#     access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
-#     secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
-#     bucket:            ENV['S3_BUCKET_NAME']
-#   },
+  s3_credentials: {
+    access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
+    secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+    bucket:            ENV['S3_BUCKET_NAME']
+  },
 
-#   storage:        :s3,
-#   s3_headers:     { "Cache-Control" => "max-age=31557600" },
-#   s3_protocol:    "https",
-#   bucket:         ENV['S3_BUCKET_NAME'],
-#   url:            ":s3_domain_url",
+  storage:        :s3,
+  s3_headers:     { "Cache-Control" => "max-age=31557600" },
+  s3_protocol:    "https",
+  bucket:         ENV['S3_BUCKET_NAME'],
+  url:            ":s3_domain_url",
 
-#   styles: {
-#       mini:     "48x48>",
-#       small:    "100x100>",
-#       product:  "240x240>",
-#       large:    "600x600>"
-#   },
+  styles: {
+    mini:     "48x48>",
+    small:    "100x100>",
+    product:  "240x240>",
+    large:    "600x600>"
+  },
 
-#   path:           "/:class/:id/:style/:basename.:extension",
-#   default_url:    "/:class/:id/:style/:basename.:extension",
-#   default_style:  "product"
-# }
+  path:           "/:class/:id/:style/:basename.:extension",
+  default_url:    "/:class/:id/:style/:basename.:extension",
+  default_style:  "product"
+}
 
-# attachment_config.each do |key, value|
-#   Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
-# end
+attachment_config.each do |key, value|
+  Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
+end
 
 #paperclip_defaults.each do |key, value|
 #  Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
