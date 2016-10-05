@@ -1,5 +1,9 @@
 class AddImageToTaxon < ActiveRecord::Migration
-  def change
-    add_column :spree_taxons, :image, :string
+  def up
+    add_attachment :spree_taxons, :image
+  end
+
+  def down
+    remove_attachment :spree_taxons, :image
   end
 end

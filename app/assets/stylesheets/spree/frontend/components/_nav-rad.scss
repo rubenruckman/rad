@@ -1,11 +1,82 @@
 /*
+* TAXON IMAGE
+*/
+
+.taxon-title {
+  margin-left: 13px;
+}
+#taxon-image-collection{
+
+  .bcg {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    .hsContainer {
+      height: 600px;
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      opacity: 1;
+      z-index: 1;
+      .hsContent {
+        max-width: 1180px;
+        margin: -150px auto 0 auto;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        float: none;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  #taxon-image-collection{
+    display: none;
+    max-width: 768px;
+    .bcg {
+      background-size: contain;
+    }
+  }
+  #mob-taxon-image-collection{
+    max-width: 768px;
+    display: block !important;
+    .bcg {
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-attachment: scroll;
+      .hsContainer {
+        height: 240px;
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        opacity: 1;
+        z-index: 1;
+        .hsContent {
+          max-width: 768px;
+          margin: -150px auto 0 auto;
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+          float: none;
+        }
+      }
+    }
+
+
+  }
+}
+/*
  * Navigation
  */
 
 .nav-rad {
   font-size:1em;
-  text-transform:uppercase;
-  font-family:$sub-font;
+  text-transform: uppercase;
+  font-family: $sub-font;
   background-color: inherit;
   border-color: $white;
   color: $mediumgray;
