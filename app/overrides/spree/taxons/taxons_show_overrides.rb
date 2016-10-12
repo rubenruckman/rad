@@ -1,5 +1,5 @@
 Deface::Override.new(:virtual_path  => "spree/shared/_header",
-                     :insert_after => '#header',
+                     :insert_before => '#logo',
                      :text          => "
 <% if @taxon && @taxon.image.present? %>
 <div id='taxon-image-collection'>
@@ -13,6 +13,8 @@ Deface::Override.new(:virtual_path  => "spree/shared/_header",
 <% end %>
                               ",
                      name: "taxon_image_page")
+
+
 
 Deface::Override.new(:virtual_path  => "spree/shared/_main_nav_bar",
                      :insert_after => '#main-nav-bar',
@@ -29,3 +31,12 @@ Deface::Override.new(:virtual_path  => "spree/shared/_main_nav_bar",
 <% end %>
                               ",
                      name: "mob-taxon_image_page")
+
+Deface::Override.new(:virtual_path  => "spree/taxons/show",
+                     :insert_before => '[data-hook="taxon_products"]',
+                     :text          => "
+<% if @taxon && @taxon.page.present? %>
+<%= @taxon.page.body.to_s.html_safe %>
+<% end %>
+                              ",
+                     name: "taxon_image_page")

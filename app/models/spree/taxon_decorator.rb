@@ -1,5 +1,5 @@
 Spree::Taxon.class_eval do
-  #has_one :page, class_name: 'Spree::Page', inverse_of: :taxon
+  has_one :page, class_name: 'Spree::Page'
 
   has_attached_file :image,
                     styles: { large: '1600x1000>', small: '500x500>' },
