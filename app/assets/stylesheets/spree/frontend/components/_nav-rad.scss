@@ -32,6 +32,21 @@
   }
 }
 @media (max-width: 768px) {
+  .navbar-header {
+    display: block !important;
+  }
+  .nav-rad {
+    margin-top: 8px !important;
+  }
+  .navbar {
+    margin-bottom: 0px !important;
+  }
+  button.navbar-toggle{
+    //float: right;
+  }
+  #header{
+    display: none;
+  }
   #taxon-image-collection{
     display: none;
     max-width: 768px;

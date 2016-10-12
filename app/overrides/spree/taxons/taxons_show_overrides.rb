@@ -40,3 +40,10 @@ Deface::Override.new(:virtual_path  => "spree/taxons/show",
 <% end %>
                               ",
                      name: "taxon_image_page")
+
+Deface::Override.new(:virtual_path  => "spree/shared/_nav_bar",
+                     :insert_after => '.navbar-toggle',
+                     :text          => "
+yyyyyyyyyyyyy
+",
+                     name: "taxon_imagffffffffe_page")
