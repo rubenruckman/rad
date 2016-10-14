@@ -19,6 +19,7 @@ Spree.config do |config|
 end
 #Spree::PermittedAttributes.taxon_attributes << { page: [:id] }
 Spree::PermittedAttributes.taxon_attributes << :image
+Spree::PermittedAttributes.taxon_attributes << :page_id
 #permitted_taxon_attribute
 # Paperclip::Attachment.default_options.merge!(
 #     YOUR OPTIONS FOR S3 HERE

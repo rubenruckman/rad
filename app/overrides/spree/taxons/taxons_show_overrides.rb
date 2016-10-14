@@ -36,19 +36,26 @@ Deface::Override.new(virtual_path: "spree/taxons/show",
                      insert_before: '[data-hook="taxon_products"]',
                      text: "
 <% if @taxon && @taxon.page.present? %>
-<%= @taxon.page.body.to_s.html_safe %>
+<div class='taxon-row-page'>
+  <div class='page_content_10'>
+    <div class='row'>
+      <%= @taxon.page.body.to_s.html_safe %>
+    </div>
+  </div>
+</div>
 <% end %>
-                              ",
+",
                      name: "taxon_image_page")
 
 Deface::Override.new(virtual_path: "spree/taxons/show",
                      replace: '.taxon-title',
                      text: "
-<div>
-<div class='page_content_10' style='margin-bottom: 9px;'>
-<div class='row' style='margin-left: -21px;'>
-<h1 class='taxon-title'><%= @taxon.name %></h1>
-</div></div>
+<div class='taxon-row-page'>
+  <div class='page_content_10'>
+    <div class='row'>
+      <h1 class='taxon-title'><%= @taxon.name %></h1>
+    </div>
+  </div>
 </div>
-                              ",
+",
                      name: "taxon_page_title")

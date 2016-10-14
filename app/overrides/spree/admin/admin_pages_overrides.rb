@@ -11,12 +11,6 @@ Deface::Override.new(:virtual_path  => "spree/admin/pages/_form",
 
                                          </div>
 
-  <div >
-        <%= f.field_container :taxon, class: ['form-group'] do %>
-          <%= f.label :taxon_id, 'Taxon' %>
-          <%= f.collection_select(:taxon_id, Spree::Taxon.all, :id, :name, { include_blank: Spree.t('match_choices.none') }, { class: 'select2'}) %>
-        <% end %>
-      </div>
-                             </div>
+                 </div>
                               ",
                      name: "page_taxon")
