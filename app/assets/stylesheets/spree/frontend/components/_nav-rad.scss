@@ -34,6 +34,31 @@
 @media (max-width: 768px) {
   .navbar-header {
     display: block !important;
+    .mobile-main-menu {
+      display:inline-block;
+      float:right;
+      width:127px;
+      height: 106px;
+      padding-top: 31px;
+      .mobile-cart-link {
+        img {
+          width:53px;
+          opacity: 0.6;
+          margin-top: 8px;
+        }
+        &.current-cart {
+          img {
+            background-color: #ddd;
+          }
+        }
+      }
+    }
+    .mobile-logo{
+      display:inline-block;
+      img{
+        width:200px;
+      }
+    }
   }
   .nav-rad {
     margin-top: 8px !important;
