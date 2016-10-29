@@ -2,7 +2,7 @@
    <div class="navbar-header" style="display:none;">
        <span class="mobile-logo">
        <%= link_to root_path do %>
-       <%= image_tag 'store/RAD_Logo_Lockup_Black.svg' %>
+       <%= image_tag 'store/logo-black.svg' %>
        <% end %>
        </span>
       <span class="mobile-main-menu">       
