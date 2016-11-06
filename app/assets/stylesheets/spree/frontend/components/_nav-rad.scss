@@ -31,7 +31,20 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  #rad-navbar-collapse{
+    margin-top: 77px;
+  }
+}
 @media (max-width: 768px) {
+  #rad-navbar-collapse{
+    //margin-top: 77px;
+  }
+  .row {
+     margin-left: 0px !important;
+     margin-right: 0px !important;
+  }
   .navbar-header {
     display: block !important;
     .mobile-main-menu {
@@ -40,6 +53,8 @@
       width:145px;
       padding-top: 31px;
       .mobile-cart-link {
+        float: right;
+        padding-right: 15px;
         img {
           width:53px;
           opacity: 0.6;
@@ -89,13 +104,17 @@
       background-size: contain;
     }
   }
+
   #mob-taxon-image-collection{
     max-width: 768px;
     display: block !important;
+    margin-top: 30px;
     .bcg {
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain;
       background-attachment: scroll;
+      background-position: center top;
+      height: 478px;
       .hsContainer {
         height: 240px;
         display: table;
@@ -119,6 +138,35 @@
 
   }
 }
+
+@media (max-width: 425px) {
+  #mob-taxon-image-collection{
+    overflow: hidden;
+    height: 218px;
+    .bcg {
+      height: 389px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .row{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+  .taxon-row-page .page_content_10 .row h1 {
+    margin-left: 0px;
+  }
+  .taxon-row-page .page_content_10 .row {
+    margin-left: 0px;
+  }
+  #mob-taxon-image-collection{
+    overflow: hidden;
+    height: 180px;
+  }
+}
+
+
 /*
  * Navigation
  */
@@ -133,7 +181,27 @@
   text-transform: uppercase;
   margin-top:20px;
   margin-bottom:0px;
-
+  ul.mobile-taxon-items  {
+    font-family: $sub-font;
+    background-color: inherit;
+    border-color: $white;
+    color: $mediumgray;
+    margin: 7.5px -15px;
+    line-height: 20px;
+    li {
+      list-style: none;
+      height: 30px;
+      a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 20px;
+        color: #777;
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+  }
   }
 
 @media (min-width: 768px) {
