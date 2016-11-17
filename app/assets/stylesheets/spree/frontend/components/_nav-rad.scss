@@ -31,6 +31,16 @@
     }
   }
 }
+@media (width: 768px) {
+  .navbar-toggle {
+    display: block !important;
+
+  }
+  #rad-navbar-collapse[aria-expanded="true"]{
+    margin-top: 77px !important;
+  }
+
+}
 
 @media (max-width: 767px) {
   #rad-navbar-collapse{
