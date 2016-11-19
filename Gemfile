@@ -43,6 +43,7 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'thin'
 end
 
 
@@ -59,3 +60,7 @@ gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings', branch: 
 # gem engineyard
 gem 'envyable'
 gem 'aws-sdk', '< 2.0'
+gem 'foreman'
+gem 'puma', '~> 3.6.0'
+gem 'rails_12factor'
+gem 'dotenv-rails', groups: [:development, :test]

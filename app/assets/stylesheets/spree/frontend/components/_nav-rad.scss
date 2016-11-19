@@ -1,29 +1,234 @@
 /*
+* TAXON IMAGE
+*/
+
+.taxon-title {
+  margin-left: 13px;
+}
+#taxon-image-collection{
+
+  .bcg {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    .hsContainer {
+      height: 600px;
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      opacity: 1;
+      z-index: 1;
+      .hsContent {
+        max-width: 1180px;
+        margin: -150px auto 0 auto;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        float: none;
+      }
+    }
+  }
+}
+@media (width: 768px) {
+  .navbar-toggle {
+    display: block !important;
+
+  }
+  #rad-navbar-collapse[aria-expanded="true"]{
+    margin-top: 77px !important;
+  }
+
+}
+
+@media (max-width: 767px) {
+  #rad-navbar-collapse{
+    margin-top: 77px;
+  }
+}
+@media (max-width: 768px) {
+  #rad-navbar-collapse{
+    //margin-top: 77px;
+  }
+  .row {
+     margin-left: 0px !important;
+     margin-right: 0px !important;
+  }
+  .navbar-header {
+    display: block !important;
+    .mobile-main-menu {
+      display:inline-block;
+      float:right;
+      width:145px;
+      padding-top: 31px;
+      .mobile-cart-link {
+        float: right;
+        padding-right: 15px;
+        img {
+          width:53px;
+          opacity: 0.6;
+          margin-top: 8px;
+        }
+        &.current-cart {
+          img {
+            background-color: #ddd;
+          }
+        }
+      }
+    }
+    .mobile-logo{
+      display:inline-block;
+      position: absolute;
+      left: 4px;
+      bottom: 4px;
+      img{
+        width:100px;
+      }
+    }
+  }
+  .nav-rad {
+    margin-top: -28px !important;
+  }
+  .navbar {
+    border: none;
+    margin-bottom: 0px !important;
+    .navbar-header{
+      position: fixed;
+      width: 100%;
+      height: 80px;
+      z-index: 2;
+      background-color: #fff;
+    }
+  }
+  button.navbar-toggle{
+    //float: right;
+  }
+  #header{
+    display: none;
+  }
+  #taxon-image-collection{
+    display: none;
+    max-width: 768px;
+    .bcg {
+      background-size: contain;
+    }
+  }
+
+  #mob-taxon-image-collection{
+    max-width: 768px;
+    display: block !important;
+    margin-top: 30px;
+    .bcg {
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-attachment: scroll;
+      background-position: center top;
+      height: 478px;
+      .hsContainer {
+        height: 240px;
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        opacity: 1;
+        z-index: 1;
+        .hsContent {
+          max-width: 768px;
+          margin: -150px auto 0 auto;
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+          float: none;
+        }
+      }
+    }
+
+
+  }
+}
+
+@media (max-width: 425px) {
+  #mob-taxon-image-collection{
+    overflow: hidden;
+    height: 218px;
+    .bcg {
+      height: 389px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .row{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+  .taxon-row-page .page_content_10 .row h1 {
+    margin-left: 0px;
+  }
+  .taxon-row-page .page_content_10 .row {
+    margin-left: 0px;
+  }
+  #mob-taxon-image-collection{
+    overflow: hidden;
+    height: 180px;
+  }
+}
+
+
+/*
  * Navigation
  */
 
 .nav-rad {
   font-size:1em;
-  text-transform:uppercase;
-  font-family:$sub-font;
+  text-transform: uppercase;
+  font-family: $sub-font;
   background-color: inherit;
   border-color: $white;
-  color: $mediumgray; 
+  color: $mediumgray;
   text-transform: uppercase;
   margin-top:20px;
   margin-bottom:0px;
+  ul.mobile-taxon-items  {
+    font-family: $sub-font;
+    background-color: inherit;
+    border-color: $white;
+    color: $mediumgray;
+    margin: 7.5px -15px;
+    line-height: 20px;
+    li {
+      list-style: none;
+      height: 30px;
+      a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 20px;
+        color: #777;
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+  }
   }
 
- @media (min-width: 768px) {
+@media (min-width: 768px) {
+  .nav-rad {
+    .mobile-items {
+      display: none;
+    }
+  }
   .navbar .navbar-nav {
     display: inline-block;
     float: none;
     vertical-align: top; }
 
   .navbar .navbar-collapse {
-    text-align: center; } 
+    text-align: center; }
 	}
-	  
+
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
   color: $orange;
   background-color: $white;
@@ -57,4 +262,8 @@ font-family:$sub-font;
 #top-nav-bar .nav > li > a:hover, .navbar-login .nav > li > a:focus {
   background-color: $orange;
   color: $white;
+}
+
+#breadcrumbs {
+  display: none;
 }

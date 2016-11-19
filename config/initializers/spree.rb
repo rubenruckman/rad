@@ -17,10 +17,13 @@ Spree.config do |config|
   config.admin_interface_logo = 'admin/RAD_Logo_Lockup_White.svg'
    config.products_per_page = 100
 end
-
+#Spree::PermittedAttributes.taxon_attributes << { page: [:id] }
+Spree::PermittedAttributes.taxon_attributes << :image
+Spree::PermittedAttributes.taxon_attributes << :page_id
+#permitted_taxon_attribute
 # Paperclip::Attachment.default_options.merge!(
 #     YOUR OPTIONS FOR S3 HERE
-# ) 
+# )
 
 #paperclip_defaults = {
 #
@@ -54,16 +57,17 @@ attachment_config = {
   url:            ":s3_domain_url",
 
   styles: {
-      mini:     "48x48>",
-      small:    "100x100>",
-      product:  "240x240>",
-      large:    "600x600>"
+    mini:     "48x48>",
+    small:    "100x100>",
+    product:  "240x240>",
+    large:    "600x600>"
   },
 
   path:           "/:class/:id/:style/:basename.:extension",
   default_url:    "/:class/:id/:style/:basename.:extension",
   default_style:  "product"
 }
+
 
 attachment_config.each do |key, value|
   Spree::Image.attachment_definitions[:attachment][key.to_sym] = value

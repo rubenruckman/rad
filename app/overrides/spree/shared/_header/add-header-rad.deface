@@ -1,3 +1,4 @@
 set_attributes 'header'
-attributes :class => 'header-rad'
+  attributes :class => "header-rad <%= (@taxon && @taxon.image.present?) ? 'taxon-img' : '' %>"
+
 

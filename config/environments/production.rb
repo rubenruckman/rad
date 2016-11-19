@@ -81,7 +81,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  
-  Envyable.load('../env.yml')
-  
+
+  Envyable.load('../env.yml') if File.exist?('../env.yml')
+
 end

@@ -1,13 +1,15 @@
 <div id="products" class="page_content_10" data-hook>
 <% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
 <div class="row">
-  <% @taxonomies.each do |taxonomy| %>
+  <% (@taxon ? [@taxon.taxonomy] :  @taxonomies).each do |taxonomy| %>
     <% if true || taxonomy.name != "Apparel" &&  taxonomy.name != "Experience" %>
     <% cache [I18n.locale, taxonomy, max_level, @taxon] do %>
+      <% unless @taxon %>
       <a name="<%= taxonomy.name %>"></a>
       <h3 class='taxonomy-root'><%= taxonomy.name %></h3>
+      <% end %>
       <div id="products" class="row" data-hook>
-      <% Spree::Product.in_taxons(taxonomy.id).sort_by(&:available_on).each do |product| %>
+      <% Spree::Product.in_taxons(taxonomy.id).order(:name).each do |product| %>
         <% url = spree.product_url(product, taxon_id: @taxon.try(:id)) %>
           <div id="product_<%= product.id %>" class="col-xs-12 col-sm-3 img-gutter-7-7" data-hook="products_list_item" itemscope itemtype="https://schema.org/Product">
             <div class="">
@@ -26,7 +28,7 @@
         <% end %>
         <% reset_cycle("classes") %>
       </div>
-      
+
       <% end %>
     <% end %>
   <% end %>

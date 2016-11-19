@@ -2,7 +2,7 @@ header {
   overflow: hidden;
   background-color: $blue;
   padding-bottom: 0;
-  vertical-align: bottom; 
+  vertical-align: bottom;
  }
 
 .header-home, .header-rad {
@@ -28,15 +28,51 @@ header {
         width:350px;
     }
     .header-rad {
-      height: 152px;
+      height: 219px;
       padding-bottom: 0%;
       margin-bottom: 0%;
-      background-color: $blue; 
+      background-color: $blue;
+      &.taxon-img {
+        height: 600px;
+        #logo {
+          height: 600px;
+          img {
+            bottom: 0px !important;
+            top: auto;
+          }
+        }
+        #taxon-image-collection{
+          position: absolute;
+          .bcg {
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            .hsContainer {
+              height: 600px;
+              display: table;
+              table-layout: fixed;
+              width: 100%;
+              overflow: hidden;
+              position: relative;
+              opacity: 1;
+              z-index: 1;
+              .hsContent {
+                max-width: 1180px;
+                margin: -150px auto 0 auto;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                float: none;
+              }
+            }
+          }
+        }
+      }
      }
     .header-rad #logo img {
         width:490px;
         position: absolute;
         left: 48px;
-        top: -40px;
+        top: 0px;
     }
 }

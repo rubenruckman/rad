@@ -1,19 +1,35 @@
 <!-- replace_contents '#main-nav-bar' -->
-   <div class="navbar-header">
+   <div class="navbar-header" style="display:none;">
+       <span class="mobile-logo">
+       <%= link_to root_path do %>
+       <%= image_tag 'store/logo-black.svg' %>
+       <% end %>
+       </span>
+      <span class="mobile-main-menu">       
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#rad-navbar-collapse">
          <span class="sr-only">Toggle navigation</span>
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
       </button>
+       <%= link_to '/cart', class: (current_page?('/cart') ? 'current-cart mobile-cart-link' : 'mobile-cart-link') do %>
+       <%= image_tag('store/Shopping_cart_font_awesome_RAD.svg') %>
+       <% end %>
+      </span> 
    </div>
-   <div class="collapse navbar-collapse" id="rad-navbar-collapse">
+   <div class="collapse navbar-collapse" id="rad-navbar-collapse" style="">
      <ul class="nav navbar-nav">
-     <li class="hidden-lg hidden-md hidden-sm"><erb loud>  link_to_cart </erb></li>
      <li role="separator" class="divider hidden-lg hidden-md hidden-sm"></li>
      <erb loud>render partial: 'spree/shared/nav_login_bar'</erb>
      <li role="separator" class="divider hidden-lg hidden-md hidden-sm"></li>
-     <li><a href="/products">Products</a></li>
+     <li>
+       <a href="/products">Products</a>
+       <ul class="mobile-taxon-items">
+         <% Spree::Taxon.roots.order(:position).each do |taxon| %>
+            <li class='mobile-items'><%= link_to(taxon.name, seo_url(taxon)) %></li>
+         <% end %>
+       </ul>
+     </li>
      <erb loud>render partial: 'spree/static_content/static_content_header'</erb>
     </ul>
     </div>
