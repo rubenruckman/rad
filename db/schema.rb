@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150727062924) do
+ActiveRecord::Schema.define(version: 20161014071221) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -334,6 +334,7 @@ ActiveRecord::Schema.define(version: 20150727062924) do
     t.boolean  "show_in_sidebar",          default: false, null: false
     t.string   "meta_title"
     t.boolean  "render_layout_as_partial", default: false
+    t.boolean  "landing_of_taxon",         default: false
   end
 
   add_index "spree_pages", ["slug"], name: "index_spree_pages_on_slug", using: :btree
@@ -909,8 +910,8 @@ ActiveRecord::Schema.define(version: 20150727062924) do
 
   create_table "spree_taxons", force: :cascade do |t|
     t.integer  "parent_id"
-    t.integer  "position",          default: 0
-    t.string   "name",                          null: false
+    t.integer  "position",           default: 0
+    t.string   "name",                           null: false
     t.string   "permalink"
     t.integer  "taxonomy_id"
     t.integer  "lft"
@@ -920,12 +921,17 @@ ActiveRecord::Schema.define(version: 20150727062924) do
     t.integer  "icon_file_size"
     t.datetime "icon_updated_at"
     t.text     "description"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "meta_title"
     t.string   "meta_description"
     t.string   "meta_keywords"
     t.integer  "depth"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "page_id"
   end
 
   add_index "spree_taxons", ["parent_id"], name: "index_taxons_on_parent_id", using: :btree
