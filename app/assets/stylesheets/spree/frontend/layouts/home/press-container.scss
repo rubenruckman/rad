@@ -1,5 +1,5 @@
 .press, .downloads {
-  color: $white;
+  color: $black;
   padding: 20px 8%;
 	p{
 	padding:10px 0px;
@@ -7,15 +7,15 @@
   }
 
 .downloads {
-  background-color: $blue; 
+  background-color: $white; 
    .btn-rad {
-    background-color: $blue;
+    background-color: $white;
 	}
 }
 
 .press{
-  background-color: $orange;
+  background-color: $white;
 	.btn-rad{
-	  background-color: $orange;
+	  background-color: $white;
 	}
 }

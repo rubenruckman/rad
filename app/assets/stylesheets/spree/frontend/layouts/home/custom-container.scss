@@ -19,7 +19,7 @@
 }
 
 .press-container, .download-container {
-  color: $white;
+  color: $gray;
   padding: 20px 8%;
 	p{
 	padding:10px 0px;
@@ -27,15 +27,15 @@
   }
 
 .download-container {
-  background-color: $blue; 
+  background-color: $white; 
    .btn-rad {
-    background-color: $blue;
+    background-color: white;
 	}
 }
 
 .press-container{
-  background-color: $orange;
+  background-color: $white;
 	.btn-rad{
-	  background-color: $orange;
+	  background-color: $white;
 	}
 }
