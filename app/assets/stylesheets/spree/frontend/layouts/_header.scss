@@ -1,6 +1,6 @@
 header {
   overflow: hidden;
-  background-color: $blue;
+  background-color: $darkgray;
   padding-bottom: 0;
   vertical-align: bottom;
  }
@@ -28,10 +28,10 @@ header {
         width:350px;
     }
     .header-rad {
-      height: 219px;
+      height: 216px;
       padding-bottom: 0%;
       margin-bottom: 0%;
-      background-color: $blue;
+      background-color: $darkgray;
       &.taxon-img {
         height: 600px;
         #logo {

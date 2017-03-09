@@ -54,6 +54,18 @@ background-color: $mediumgray;
 border-color: $mediumgray;
 }
 
+.btn-gray{
+color: $gray;
+background-color: $mediumgray; 
+border-color: $gray;
+}
+
+.btn-gray:hover, .btn-darkgray:focus{
+color: $lightgray;
+background-color: $gray; 
+border-color: $gray;
+}
+
 .btn-prod-color, .btn-prod-size {
 margin: 0px 0px 7px 0px;
 padding:.3em;
