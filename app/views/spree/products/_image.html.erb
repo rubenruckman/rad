@@ -1,7 +1,8 @@
 <% if (@product.images + @product.variant_images).uniq.size > 1 %>
     <% @product.images.each do |i| %>
       <div>
-        <%= image_tag(i.attachment.url(:product), class: "img-responsive") %>
+        <%= image_tag(i.attachment.url(:product), class: "img-responsive")%>
+        <span style="position:relative;float:left;width:0px;height:0px;top:-40px;left:6px;"><a data-pin-media="<%=i.attachment.url(:product)%>" data-pin-do="buttonPin" data-pin-tall="true" data-pin-round="true" data-pin-save="false" href="https://www.pinterest.com/pin/create/button/"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_round_red_32.png" /></a></span>
       </div>
     <% end %>
 <% end %>
